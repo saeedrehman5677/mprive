@@ -767,7 +767,7 @@ label {
     z-index: 1;
 }
 .main-header.header-style-2.is-fixed .navigation > li > a {
-  color: white !important;
+  color: #161e2d !important;
 }
 .main-header.header-style-2.is-fixed .header-account ul li a {
   color: #161e2d !important;
@@ -1484,6 +1484,7 @@ label {
   padding: 30px 20px 100px;
   height: 100vh;
   overflow-y: auto;
+  background: white;
 }
 
 .mobile-menu-visible {

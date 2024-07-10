@@ -1,14 +1,19 @@
 
 <section class="flat-slider home-5">
     <div class="wrap-slider-swiper">
+
+
         <div class="video-background">
-            <video  autoplay muted loop id="myVideo">
-                <source src="{{asset('videoplayback.webm')}}" type="video/mp4">
+            <video   autoplay muted playsinline id="myVideo">
+                <source  src="https://res.cloudinary.com/dituvuuk9/video/upload/v1720635396/videoplayback_urxor0.mp4" type="video/mp4">
                 Your browser does not support HTML5 video.
             </video>
             <div class="overlay"></div>
 
         </div>
+        <script>
+            document.getElementById('myVideo').play();
+        </script>
     </div>
     <div class="container">
         <div class="row">
@@ -128,8 +133,10 @@
     </div>
 </section>
 
-<script>
+
     document.addEventListener('DOMContentLoaded', function () {
+
+
         const rentTab = document.querySelector('a[href="#forRent"]');
         const saleTab = document.querySelector('a[href="#forSale"]');
         const rentForm = document.getElementById('rentForm');
