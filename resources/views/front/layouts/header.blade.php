@@ -3,8 +3,14 @@
 <head>
     <meta charset="utf-8">
     @stack('meta')
+    <title>Mprive - Real Estate Services | Latest News </title>
+    <meta name="description" content="Mprive - Real Estate Services">
+    <meta name="keywords" content="propety in dubai, dubai properties, buy property in emirate ">
+    <meta property="og:title" content="Mprive - Real Estate Services| Your Trust Our Goal">
+    <meta property="og:description" content="Mprive - Real Estate Services">
+    <meta property="og:image" content="{{asset('images/logo/logo.jpg')}}">
 
-    <meta name="author" content="mprivereality.com">
+    <meta name="author" content="mprive.com">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
@@ -19,8 +25,8 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/styles.css')}}"/>
 
     <!-- Favicon and Touch Icons  -->
-    <link rel="shortcut icon" href="{{asset('img/logo-white.png')}}">
-    <link rel="apple-touch-icon-precomposed" href="{{asset('img/logo-white.png')}}">
+    <link rel="shortcut icon" href="{{asset('images/logo/logo.jpg')}}">
+    <link rel="apple-touch-icon-precomposed" href="{{asset('images/logo/logo.jpg')}}">
     @livewireStyles
 </head>
 <body class="body">
