@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="{{asset('css/jquery.fancybox.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/swiper-bundle.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/animate.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('css/styles.css')}}"/>
+    <link rel="stylesheet" type="text/css" href="{{asset('css/styles.css')}}?v=1"/>
 
     <!-- Favicon and Touch Icons  -->
     <link rel="shortcut icon" href="{{asset('images/logo/logo.jpg')}}">
