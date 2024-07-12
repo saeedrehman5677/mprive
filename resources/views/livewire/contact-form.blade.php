@@ -18,13 +18,13 @@
     </div>
   @if( $this->propertyId)
     <div class="d-flex flex-row">
-        <div class="ip-group me-md-2">
+        <div class="ip-group me-md-2 col-6">
             <label for="viewingDate">Viewing Date:</label>
             <input type="date" wire:model="viewingDate" class="form-control">
             @error('viewingDate') <span class="error">{{ $message }}</span> @enderror
         </div>
 
-        <div class="ip-group">
+        <div class="ip-group col-6">
             <label for="viewingTime">Viewing Time:</label>
             <input type="time" wire:model="viewingTime" class="form-control">
             @error('viewingTime') <span class="error">{{ $message }}</span> @enderror
