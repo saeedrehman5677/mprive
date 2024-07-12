@@ -43,6 +43,14 @@
                             {{ $developer->name }}
                         </td>
                     </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.developer.fields.description') }}
+                        </th>
+                        <td>
+                            {!! $developer->description !!}
+                        </td>
+                    </tr>
                     </tbody>
                 </table>
                 <div class="form-group">

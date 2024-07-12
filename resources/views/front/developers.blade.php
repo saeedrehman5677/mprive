@@ -27,9 +27,9 @@
                 @foreach($developers as $developer)
                 <div class="box col-lg-3 col-md-3">
                     <div class="box-service style-1">
-                        <div class="icon-box">
+                        <a href="{{url('properties')}}?developer={{$developer->name}}" class="icon-box">
                             <img class="img" src="{{$developer?->image?->url}}" >
-                        </div>
+                        </a>
                     </div>
                 </div>
                 @endforeach

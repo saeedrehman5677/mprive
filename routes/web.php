@@ -96,7 +96,6 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::post('developers/media', 'DeveloperController@storeMedia')->name('developers.storeMedia');
     Route::post('developers/ckmedia', 'DeveloperController@storeCKEditorImages')->name('developers.storeCKEditorImages');
     Route::resource('developers', 'DeveloperController');
-
     // Amenities
     Route::delete('amenities/destroy', 'AmenitiesController@massDestroy')->name('amenities.massDestroy');
     Route::post('amenities/media', 'AmenitiesController@storeMedia')->name('amenities.storeMedia');

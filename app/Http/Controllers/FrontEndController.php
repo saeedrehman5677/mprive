@@ -38,7 +38,7 @@ class FrontEndController
     public  function property($slug)
     {
         $featured  = Sale::with('property_types','amenities','media')->where('featured' ,1)->take(10)->get();
-        $property  = Sale::with('property_types','media')->where('slug', $slug)->firstOrFail();
+        $property  = Sale::with('property_types','','media')->where('slug', $slug)->firstOrFail();
         return view('front.property', compact('property' ,'featured'));
     }
 
@@ -63,7 +63,8 @@ class FrontEndController
         $types = PropertyType::with('media')->withCount('propertyTypeSales')->take(10)->get();
         $amenities  = Amenity::with('media')->get();
         $properties  = Sale::with('property_types','media')->paginate(10);
-        return view('front.propertyListing', compact('properties' ,'types' ,'amenities') );
+        $developer = Developer::where('name', request()->get('developer'))->first();
+        return view('front.propertyListing', compact('properties' ,'developer' ,'types' ,'amenities') );
     }
     public  function blogs()
     {

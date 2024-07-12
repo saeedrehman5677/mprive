@@ -37,6 +37,9 @@
     <section class="flat-section-v6 flat-recommended flat-sidebar">
         <div class="container">
             <div class="box-title-listing">
+                @if(request()?->query('developer'))
+                <img class="d-img img" src="{{ $developer->image?->url }}">
+                @endif
                 <h5>
                     @if(Route::currentRouteName()  == "projects")
                        New Projects
@@ -50,7 +53,11 @@
                     @if(request()?->query('emirate'))
                             Properties in {{ request()?->query('emirate') }}
                     @endif
+                     @if(request()?->query('developer'))
+                            Properties Of {{ request()?->query('developer') }}
+                    @endif
                 </h5>
+
 
                 <div class="box-filter-tab">
                     <ul class="nav-tab-filter" role="tablist">
@@ -76,6 +83,13 @@
                         </ul>
                     </div>
                 </div>
+            </div>
+            <div class="mt-3 mb-2 ms-2">
+                @if(request()?->query('developer'))
+                    <div class="pt-2 pb-2 d-desc">
+                        {!! $developer->description !!}
+                    </div>
+                @endif
             </div>
             @livewire('property-search')
         </div>

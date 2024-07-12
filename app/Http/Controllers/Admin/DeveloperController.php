@@ -35,7 +35,6 @@ class DeveloperController extends Controller
 
     public function store(StoreDeveloperRequest $request)
     {
-
         $developer = Developer::create($request->all());
 
         if ($request->input('image', false)) {

@@ -3,6 +3,7 @@
 namespace App\Livewire;
 
 use App\Models\Amenity;
+use App\Models\Developer;
 use App\Models\PropertyType;
 use Illuminate\Support\Facades\Route;
 use Livewire\Component;
@@ -23,12 +24,16 @@ class PropertySearch extends Component
     public $minSize;
     public $maxSize;
     public $amenities = [];
+    public $developer = [];
 
 
     public function mount()
     {
         if ( request()->query('emirate')) {
             $this->emirate = request()->query('emirate');
+        }
+        if ( request()->query('developer')) {
+            $this->developer = request()->query('developer');
         }
         if ( request()->query('type')) {
             $this->type = request()->query('type');
@@ -71,6 +76,12 @@ class PropertySearch extends Component
             ->when($this->property_status !== "any", function ($query) {
 
                 $query->where('property_status', $this->property_status);
+            })
+            ->when($this->developer !== "", function ($query) {
+                $id = Developer::with('media')->where('name' ,$this->developer )->first();
+                if ($id) {
+                    $query->where('developer', $id->id);
+                }
             })
             ->when($this->bedrooms, function ($query) {
                 $query->where('bed_rooms', '>=', $this->bedrooms);
