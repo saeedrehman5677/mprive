@@ -12,10 +12,23 @@
 <section class="flat-title-page style-2">
     <div class="container">
         <ul class="breadcrumb">
-            <li><a href="{{ url('/') }}">Home</a></li>
-            <li>/ Contact Us</li>
+            <li>
+                <a href="{{ url('/') }}">Home</a>
+                {{ request()->query('for')  }}
+              </li>
+            <li>/@if(request()->query('for') == 'listing')
+                   Property Listing
+                @else
+                     Contact Us
+                @endif
+                </li>
         </ul>
-        <h2 class="text-center">Contact Us</h2>
+        <h2 class="text-center">@if(request()->query('for') == 'listing')
+                Property Listing
+            @else
+                Contact Us
+            @endif
+        </h2>
     </div>
 </section>
 <!-- End Page Title -->
@@ -24,8 +37,19 @@
         <div class="row">
             <div class="col-lg-8">
                 <div class="contact-content">
-                    <h5>Drop Us A Line</h5>
-                    <p class="body-2 text-variant-1">Feel free to connect with us through our online channels for updates, news, and more.</p>
+                    <h5>
+                        @if(request()->query('for') == 'listing')
+                            Add Your Property
+                        @else
+                            Drop Us A Line
+                        @endif
+                        </h5>
+                    <p class="body-2 text-variant-1">
+                        @if(request()->query('for') == 'listing')
+                            Please Enter the details Below and our team will get back to you as soon as possible
+                        @else
+                            Feel free to connect with us through our online channels for updates, news, and more.</p>
+                    @endif
                     <div  class="box-contact-v2">
                         @livewire('contact-form', ['propertyId' => null])
                     </div>

@@ -19,7 +19,7 @@
                                     <li class="dropdown"><a href="{{url('developers')}}">Developers</a></li>
                                     <li class="dropdown"><a href="{{url('faq')}}">FAQs</a></li>
                                     <li class="dropdown"><a href="{{url('about')}}">About Us</a></li>
-
+                                    <li class="dropdown"><a href="{{url('contact')}}?for=listing">List Your Property</a></li>
                                     <li class="dropdown"><a href="{{url('contact')}}">Contact Us</a></li>
                                 </ul>
                             </div>
