@@ -154,68 +154,13 @@
                         <p>We are honored to have received recognition from esteemed developers such as Emaar, Nakheel, Meraas, Binghatti, and Sobha,
                             naming us as one of their top 10 agencies. This recognition underscores our commitment to delivering outstanding results and maintaining strong relationships with developers and clients alike.
                         </p>
-                        <ul class="list-view">
-                            <li>
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M8 15.9947C12.4183 15.9947 16 12.4154 16 8C16 3.58462 12.4183 0.00524902 8 0.00524902C3.58172 0.00524902 0 3.58462 0 8C0 12.4154 3.58172 15.9947 8 15.9947Z"
-                                        fill="#198754"/>
-                                    <path
-                                        d="M7.35849 12.2525L3.57599 9.30575L4.65149 7.9255L6.97424 9.735L10.8077 4.20325L12.2462 5.19975L7.35849 12.2525Z"
-                                        fill="white"/>
-                                </svg>
-                                Emaar
-                            </li>
-                            <li>
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M8 15.9947C12.4183 15.9947 16 12.4154 16 8C16 3.58462 12.4183 0.00524902 8 0.00524902C3.58172 0.00524902 0 3.58462 0 8C0 12.4154 3.58172 15.9947 8 15.9947Z"
-                                        fill="#198754"/>
-                                    <path
-                                        d="M7.35849 12.2525L3.57599 9.30575L4.65149 7.9255L6.97424 9.735L10.8077 4.20325L12.2462 5.19975L7.35849 12.2525Z"
-                                        fill="white"/>
-                                </svg>
-                                Nakheel
-                            </li>
-                            <li>
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M8 15.9947C12.4183 15.9947 16 12.4154 16 8C16 3.58462 12.4183 0.00524902 8 0.00524902C3.58172 0.00524902 0 3.58462 0 8C0 12.4154 3.58172 15.9947 8 15.9947Z"
-                                        fill="#198754"/>
-                                    <path
-                                        d="M7.35849 12.2525L3.57599 9.30575L4.65149 7.9255L6.97424 9.735L10.8077 4.20325L12.2462 5.19975L7.35849 12.2525Z"
-                                        fill="white"/>
-                                </svg>
-                                Meraas
-                            </li>
-                            <li>
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M8 15.9947C12.4183 15.9947 16 12.4154 16 8C16 3.58462 12.4183 0.00524902 8 0.00524902C3.58172 0.00524902 0 3.58462 0 8C0 12.4154 3.58172 15.9947 8 15.9947Z"
-                                        fill="#198754"/>
-                                    <path
-                                        d="M7.35849 12.2525L3.57599 9.30575L4.65149 7.9255L6.97424 9.735L10.8077 4.20325L12.2462 5.19975L7.35849 12.2525Z"
-                                        fill="white"/>
-                                </svg>
-                                Binghatti
-                            </li>
-                            <li>
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M8 15.9947C12.4183 15.9947 16 12.4154 16 8C16 3.58462 12.4183 0.00524902 8 0.00524902C3.58172 0.00524902 0 3.58462 0 8C0 12.4154 3.58172 15.9947 8 15.9947Z"
-                                        fill="#198754"/>
-                                    <path
-                                        d="M7.35849 12.2525L3.57599 9.30575L4.65149 7.9255L6.97424 9.735L10.8077 4.20325L12.2462 5.19975L7.35849 12.2525Z"
-                                        fill="white"/>
-                                </svg>
-                                Sobha
-                            </li>
-                        </ul>
+                        <div class="list-view">
+                            @foreach($developers as $developer)
+                                <div class="col-6 col-md-4">
+                                <img  class="img" src="{{$developer?->image?->url}}" >
+                                </div>
+                            @endforeach
+                        </div>
                         <a href="{{ url('contact') }}" class="btn-view"><span class="text">Contact Us</span> <span
                                 class="icon icon-arrow-right2"></span> </a>
                     </div>
@@ -269,8 +214,7 @@
     <section class="flat-section flat-location-v2">
         <div class="container">
             <div class="box-title text-center wow fadeInUpSmall" data-wow-delay=".2s" data-wow-duration="1000ms">
-                <div class="text-subtitle text-primary">Explore Emirates</div>
-                <h4 class="mt-4">Properties  inside the emirates</h4>
+                <h4 class="mt-4">Explore Emirates</h4>
             </div>
             <div class="grid-location-second mb-md-4 wow fadeInUpSmall" data-wow-delay=".2s" data-wow-duration="1000ms">
                 <a href="{{url('properties')}}?emirate=Dubai" class="item-5 box-location-v2 hover-img">
@@ -290,51 +234,13 @@
 
                     </div>
                 </a>
-                <a href="{{url('properties')}}?emirate=Sharjah" class="item-7 box-location-v2 hover-img">
-                    <div class="box-img img-style">
-                        <img src="{{asset('images/location/sharjah.jpg')}}" alt="image-location">
-                    </div>
-                    <div class="content">
-                        <h6 class="link">Sharjah</h6>
-                    </div>
-                </a>
-            </div>
-            <div class="grid-location wow fadeInUpSmall" data-wow-delay=".2s" data-wow-duration="1000ms">
-
-                <a href="{{url('properties')}}?emirate=Ajman" class="item-1 box-location-v2 hover-img">
-                    <div class="box-img img-style">
-                        <img src="{{asset('images/location/ajman.webp')}}" alt="image-location">
-                    </div>
-                    <div class="content">
-                          <h6 class="link">Ajman</h6>
-
-                    </div>
-
-                </a>
-                <a href="{{url('properties')}}?emirate=Fujairah" class="item-2 box-location-v2 hover-img">
-                    <div class="box-img img-style">
-                        <img src="{{asset('images/location/fujairah_600x376.jpg')}}" alt="image-location">
-                    </div>
-                    <div class="content">
-                        <h6 class="link">Fujairah</h6>
-                    </div>
-                </a>
-
                 <a href="{{url('properties' ) }}?emirate=Ras Al Khaimah" class="item-3 box-location-v2 hover-img">
                     <div class="box-img img-style">
-                        <img src="{{asset('images/location/rasalkhama_600x376.jpg')}}" alt="image-location">
+                        <img src="{{asset('images/location/rasalkhama_600x376_1_801x451.jpg')}}" alt="image-location">
                     </div>
                     <div class="content">
                         <h6 class="link">Ras Al Khaimah</h6>
 
-                    </div>
-                </a>
-                <a href="{{url('properties')}}?emirate=Umm Al Quwain" class="item-4 box-location-v2 hover-img">
-                    <div class="box-img img-style">
-                        <img src="{{asset('images/location/umm-al-quwain.jpg')}}" alt="image-location">
-                    </div>
-                    <div class="content">
-                        <h6 class="link">Umm Al Quwain</h6>
                     </div>
                 </a>
 

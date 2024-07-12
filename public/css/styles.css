@@ -767,10 +767,14 @@ label {
     z-index: 1;
 }
 .main-header.header-style-2.is-fixed .navigation > li > a {
-  color: #161e2d !important;
+  color: white !important;
 }
 .main-header.header-style-2.is-fixed .header-account ul li a {
   color: #161e2d !important;
+}
+.d-img {
+    height: 40px;
+    width: auto;
 }
 
 .wrap-top {
@@ -2502,6 +2506,7 @@ label {
 }
 .flat-slider.home-5 .info-box {
   top: 50%;
+    width: 90%;
   transform: translateY(-50%);
   position: absolute;
   z-index: 4;
@@ -10124,6 +10129,9 @@ tr {
   }
 }
 @media only screen and (max-width: 575px) {
+    .main-header.header-style-2.is-fixed .navigation > li > a {
+        color: #161e2d !important;
+    }
   .wd-search-form .group-select {
     grid-template-columns: 1fr;
   }

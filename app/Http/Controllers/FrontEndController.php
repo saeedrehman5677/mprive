@@ -26,12 +26,12 @@ class FrontEndController
         $amenities = $chunks->map(function ($chunk) {
              return $chunk->values()->all();
          })->toArray();
-
+        $developers = Developer::all();
 
         $types = PropertyType::with('media')->withCount('propertyTypeSales')->take(10)->get();
         $properties  = Sale::with('property_types','media')->take(20)->get();
         $blogs = Blog::with('media')->where('status' ,"publish")->get();
-        return view('front.index' , compact('properties' ,'types' ,'agents' ,'blogs' ,'amenities'));
+        return view('front.index' , compact('properties' ,'types' ,'agents' ,'developers' ,'blogs' ,'amenities'));
 
     }
 

@@ -41,14 +41,11 @@
                     <div class="list-view">
 
                     </div>
-                    <a href="{{url('contact')}}" class="btn-view"><span class="text">Contact Us</span> <span class="icon icon-arrow-right2"></span> </a>
                 </div>
 
             </div>
             <div class="col-lg-6">
-
                     <img src="{{asset('images/slider/dubai2.jpg')}}" alt="img-property">
-
             </div>
         </div>
     </div>
@@ -74,7 +71,6 @@
                         Our track record includes numerous successful transactions, satisfied clients, and accolades from leading developers.
 
                     </p>
-                    <a href="{{url('contact')}}" class="btn-view"><span class="text">Contact Us</span> <span class="icon icon-arrow-right2"></span> </a>
                 </div>
             </div>
 
@@ -82,26 +78,6 @@
     </div>
 </section>
 
-<section class="flat-section flat-banner-about">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-5">
-                <h3>Our Sales Strategy :</h3>
-            </div>
-            <div class="col-md-7 hover-btn-view">
-                <P class="body-2 text-variant-1">
-                    Our sales approach is proactive and results-driven.
-                    We combine market insights, negotiation expertise, and personalized client service to achieve swift and successful property transactions.
-                    Our goal is not just to sell properties but to exceed client expectations at every stage of the process.
-
-                </P>
-                <a href="{{url('contact')}}" class="btn-view style-1"><span class="text">Learn More</span> <span class="icon icon-arrow-right2"></span> </a>
-
-            </div>
-
-        </div>
-    </div>
-</section>
 
 <!-- Testimonial -->
 
@@ -110,7 +86,7 @@
 <section class="flat-section-v3 flat-slider-contact">
     <div class="container">
         <div class="row content-wrap">
-            <div class="col-lg-7">
+            <div class="col-lg-12">
                 <div class="content-left">
                     <div class="box-title">
                         <h4 class="mt-4 fw-6 text-white">Rewards from Our Clients:</h4>
@@ -122,11 +98,7 @@
                 </div>
 
             </div>
-            <div class="col-lg-5">
-                <div  class="box-contact-v2">
-                    @livewire('contact-form', ['propertyId' => null])
-                </div>
-            </div>
+
         </div>
 
     </div>

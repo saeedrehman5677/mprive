@@ -49,11 +49,8 @@ class Sale extends Model implements HasMedia
     public const EMIRATES_SELECT = [
         'Dubai'          => 'Dubai',
         'Abu Dhabi'      => 'Abu Dhabi',
-        'Sharjah'        => 'Sharjah',
-        'Ajman'          => 'Ajman',
-        'Umm Al Quwain'  => 'Umm Al Quwain',
         'Ras Al Khaimah' => 'Ras Al Khaimah',
-        'Fujairah'       => 'Fujairah',
+
     ];
 
     protected $fillable = [
