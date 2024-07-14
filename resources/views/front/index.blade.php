@@ -156,10 +156,13 @@
                         </p>
                         <div class="list-view">
                             @foreach($developers as $developer)
-                                <div class="col-6 col-md-4">
-                                <img  class="img" src="{{url('properties')}}?developer={{$developer->name}}" >
-                                </div>
-                            @endforeach
+    <div class="col-6 col-md-4">
+        <a href="{{ url('properties') }}?developer={{ $developer->name }}">
+            <img class="img" src="{{ $developer->image ? $developer->image->url : '' }}" >
+        </a>
+    </div>
+@endforeach
+
                         </div>
                         <a href="{{ url('contact') }}" class="btn-view"><span class="text">Contact Us</span> <span
                                 class="icon icon-arrow-right2"></span> </a>
