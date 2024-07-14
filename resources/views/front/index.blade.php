@@ -157,7 +157,7 @@
                         <div class="list-view">
                             @foreach($developers as $developer)
                                 <div class="col-6 col-md-4">
-                                <img  class="img" src="{{$developer?->image?->url}}" >
+                                <img  class="img" src="{{url('properties')}}?developer={{$developer->name}}" >
                                 </div>
                             @endforeach
                         </div>
