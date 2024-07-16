@@ -3,6 +3,9 @@
         padding-top: 60px;
         padding-bottom: 60px;
     }
+    .section-title {
+        text-align: left;
+    }
     .default-btn {
         padding: 12px 30px;
         font-size: 14px;
@@ -96,8 +99,10 @@
     .main-banner-content p {
         font-size: 14px;
     }
+
     .main-banner-text {
-        padding: 25px 20px;
+        margin-top: 20px;
+        padding: 5px 10px;
         margin-left: 15px;
         margin-right: 15px;
     }
@@ -130,8 +135,8 @@
         margin-top: 0;
         margin-bottom: 90px;
     }
-    .about-image img {
-        width: 100%;
+    .circle-img {
+        width: 60% !important;
     }
     .about-image .back-img1, .about-image .back-img2 {
         display: none;
@@ -156,7 +161,8 @@
         line-height: 60px;
     }
     .about-content .about-inner .single-inner-box h4 {
-        font-size: 15px;
+        font-size: 12px;
+        margin-bottom: 2px !important;
     }
     .property-details-area::before {
         right: 0;

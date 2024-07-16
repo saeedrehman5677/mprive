@@ -433,6 +433,7 @@ Main Banner CSS
 }
 
 .item-bg1 {
+    width: 100%;
     background-image: url(../../assets/img/bg1.jpg);
 }
 
@@ -1648,5 +1649,78 @@ Go Top CSS
 .go-top:hover {
     color: #ffffff;
     background: #161e2d;
+}
+.btn-2{
+    margin-left: 15px;
+}
+@media (max-width: 768px) {
+    .swiper-pagination{
+        position: relative;
+        margin-top: -20px;
+    }
+    .payment-item .block {
+        height: 100px !important;
+    }
+    .payment-item{
+        width: 49% !important;
+    }
+    .logo-img {
+        margin-top :-16px;
+        height: 100px; /* Reduced height for mobile devices */
+    }
+    .ptb-100 {
+        padding-top:30px!important;
+    }
+    .btn-2{
+        margin-left: 0px;
+    }
+    .item-bg1 {
+        padding-top:30px;
+    }
+
+}
+.payment-plan {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.payment-item {
+    width: 30%;
+    margin-bottom: 20px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.payment-item .block{
+    padding: 15px;
+    height:200px;
+    background-color: #8F8175;
+
+}
+.payment-item h3{
+    text-align: center;
+    color:white;
+    font-size:36px;
+}
+.payment-item p{
+    color: white;
+}
+.payment-item h2 {
+    margin-top: 0;
+    color: #8f8176;
+    font-size: 18px;
+    text-align: start;
+    padding: 10px;
+}
+.payment-item p {
+    text-align: center;
+
+}
+.note {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 14px;
+    color: #555;
 }
 /*# sourceMappingURL=style.css.map */
