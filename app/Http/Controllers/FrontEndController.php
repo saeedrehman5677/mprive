@@ -2,14 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\UpdateContactRequest;
 use App\Models\Amenity;
 use App\Models\Blog;
+use App\Models\Contact;
 use App\Models\Developer;
 use App\Models\Faq;
 use App\Models\FaqCategory;
 use App\Models\PropertyType;
 use App\Models\Sale;
 use App\Models\Team;
+use Illuminate\Support\Facades\Mail;
 
 class FrontEndController
 {
@@ -83,5 +86,26 @@ class FrontEndController
     {
         $developers = Developer::all();
         return view('front.developers' ,compact('developers'));
+    }
+
+    public function store(UpdateContactRequest $contactRequest)
+    {
+
+        $contact = Contact::create($contactRequest->all());
+        $data = [
+            'fullname' => $contact->fullname,
+            'phone' => $contact->phone,
+            'email' => $contact->email,
+            'messageContent' => $contact->message,
+        ];
+        Mail::send('emails.contact', $data, function ($message) {
+            $message->to('office@mprive.com', 'Marina Views Landing')->
+            subject('Marina Views Contact Inquiry');
+        });
+
+        return \response()->json([
+            "status" => "success",
+            "message" =>"Your contact has been received you Team will get Back to you as soon as possible",
+        ]);
     }
 }

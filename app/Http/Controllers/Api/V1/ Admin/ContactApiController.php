@@ -1,6 +1,5 @@
 <?php
 
-namespace App\Http\Controllers\Api\V1\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\Traits\MediaUploadingTrait;
@@ -21,6 +20,7 @@ class ContactApiController extends Controller
 
         return new ContactResource(Contact::with(['property'])->get());
     }
+
 
     public function show(Contact $contact)
     {

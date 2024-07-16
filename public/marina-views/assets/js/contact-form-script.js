@@ -23,18 +23,21 @@
         var msg_subject = $("#msg_subject").val();
         var phone_number = $("#phone_number").val();
         var message = $("#message").val();
-
-
+        var spinner = $("#spinner");
+        spinner.show();
+        $('#btnSubmit').attr('disabled' , true);
         $.ajax({
             type: "POST",
-            url: "marina-views/assets/php/form-process.php",
-            data: "name=" + name + "&email=" + email + "&msg_subject=" + msg_subject + "&message=" + message,
-            success : function(statustxt){
-                if (text == "success"){
+            url: "../api/contact/store",
+            data: "full_name=" + name + "&email=" + email + "&phone=" + msg_subject + "&message=" + message + "&property=" + "marina views",
+            success : function(response){
+                $('#btnSubmit').attr('disabled' , false)
+                spinner.hide();
+                if (response.status == "success"){
                     formSuccess();
                 } else {
                     formError();
-                    submitMSG(false,statustxt);
+                    submitMSG(false,"Please Input All the fields Correctly");
                 }
             }
         });
@@ -42,7 +45,7 @@
 
     function formSuccess(){
         $("#contactForm")[0].reset();
-        submitMSG(true, "Message Submitted!")
+        submitMSG(true, "Thank You For Contacting Out Team will get Back to you as soon as Possible")
     }
 
     function formError(){

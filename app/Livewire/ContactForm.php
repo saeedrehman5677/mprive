@@ -64,7 +64,7 @@ class ContactForm extends Component
             'messageContent' => $this->message,
         ];
         Mail::send('emails.contact', $data, function ($message) {
-            $message->to('qureshi1amer@gmail.com', 'Webiste Mprive')->
+            $message->to('office@mprive.com', 'Webiste Mprive')->
             subject( $this->propertyId ?'New Viewing Request': 'New Contact Request');
         });
         session()->flash('message', $this->propertyId? 'Viewing request submitted successfully , Our Team Will get Back shortly':'Contact Request Submited Successfully, Our Team Will get Back shortly.' );

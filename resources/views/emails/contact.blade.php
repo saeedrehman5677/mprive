@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    @if($viewingDate)
+    @if(isset($viewingDate))
         <title>Viewing Property Request</title>
     @else
     <title>Contact Form Submission</title>
@@ -11,7 +11,7 @@
 <h1>Contact Form Submission</h1>
 <p>Full Name: {{ $fullname }}</p>
 <p>Phone: {{ $phone }}</p>
-@if($viewingDate)
+@if(isset($viewingDate))
 <p>Viewing Date: {{ $viewingDate }}</p>
 <p>Viewing Time: {{ $viewingTime }}</p>
 @endif
