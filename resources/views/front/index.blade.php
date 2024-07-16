@@ -154,14 +154,14 @@
                         <p>We are honored to have received recognition from esteemed developers such as Emaar, Nakheel, Meraas, Binghatti, and Sobha,
                             naming us as one of their top 10 agencies. This recognition underscores our commitment to delivering outstanding results and maintaining strong relationships with developers and clients alike.
                         </p>
-                        <div class="list-view">
+                        <div class="row">
                             @foreach($developers as $developer)
-    <div class="col-6 col-md-4">
-        <a href="{{ url('properties') }}?developer={{ $developer->name }}">
-            <img class="img" src="{{ $developer->image ? $developer->image->url : '' }}" >
-        </a>
-    </div>
-@endforeach
+                            <div class="col-6 col-md-4 pb-md-4">
+                                <a href="{{ url('properties') }}?developer={{ $developer->name }}">
+                                    <img class="img" src="{{ $developer->image ? $developer->image->url : '' }}" >
+                                </a>
+                            </div>
+                        @endforeach
 
                         </div>
                         <a href="{{ url('contact') }}" class="btn-view"><span class="text">Contact Us</span> <span
