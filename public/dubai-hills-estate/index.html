@@ -141,6 +141,9 @@
             font-size: 50px;
             z-index: 100;
         }
+        .hidden {
+            display: none;
+        }
         /* Modal styles */
     </style>
 </head>
@@ -207,6 +210,8 @@
                             <textarea placeholder="Enter your message" name="message" id="message" class="form-control" cols="30" rows="4" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-download">Send Message</button>
+                        <div id="msgSubmit" class="h4 text-center hidden">Your message has been sent successfully!</div>
+                        <div class="clearfix"></div>
                     </form>
                 </div>
             </div>
@@ -388,7 +393,7 @@
             <div class="row m-0">
                 <div class="col-lg-6 col-md-12 p-0">
                     <div class="video-image">
-                        <img src="assets/img/contact1.jpg" alt="image">
+                        <img src="assets/img/contact_banner1.jpg" alt="image">
 
                         <a href="https://www.youtube.com/watch?v=bk7McNUjWgw" class="video-btn popup-youtube"><i class="icofont-ui-play"></i></a>
                     </div>
@@ -833,6 +838,26 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#contactForm').on('submit', function(e) {
+                e.preventDefault(); // Prevent default form submission
+                
+                // Optionally, you can add form validation or AJAX submission here
+
+                // Show the success message
+                $('#msgSubmit').removeClass('hidden');
+
+                // Hide the modal after a delay
+                setTimeout(function() {
+                    $('#contactModal').modal('hide');
+                    $('#msgSubmit').addClass('hidden'); // Hide the success message after hiding the modal
+                    $('#contactForm').trigger("reset"); // Reset the form fields
+                }, 2000); // Adjust the delay as needed (2000 ms = 2 seconds)
+            });
+        });
+    </script>
 
 
 </body>
