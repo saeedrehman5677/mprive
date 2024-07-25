@@ -141,6 +141,7 @@
             font-size: 50px;
             z-index: 100;
         }
+        
         .hidden {
             display: none;
         }
@@ -181,42 +182,7 @@
     </header>
     <!-- End Header Area -->
 
-    <!-- Modal -->
-    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Your Full Name</label>
-                            <input type="text" class="form-control" name="name" id="name" placeholder="Enter your name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Your Email</label>
-                            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="msg_subject">Your Phone</label>
-                            <input type="text" class="form-control" name="msg_phone" id="msg_subject" placeholder="Enter your Phone Number" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Your Message</label>
-                            <textarea placeholder="Enter your message" name="message" id="message" class="form-control" cols="30" rows="4" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-download">Send Message</button>
-                        <div id="msgSubmit" class="h4 text-center hidden">Your message has been sent successfully!</div>
-                        <div class="clearfix"></div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
     <!-- Start Main Banner -->
     <section class="home-area">
@@ -746,49 +712,49 @@
                     </div>
                 </div>
 
-                <div class="col-lg-7 col-md-12 ">
-                    <form id="contactForm ">
-                        <div class="row ">
-                            <div class="col-lg-6 col-md-6 ">
-                                <div class="form-group mb-3 ">
-                                    <label class="mb-2 ">Your Full Name</label>
-                                    <input type="text " class="form-control " name="name " id="name " placeholder="Enter your name " required data-error="Please enter your name ">
-                                    <div class="help-block with-errors "></div>
+                <div class="col-lg-7 col-md-12">
+                    <form id="contactForm">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6">
+                                <div class="form-group mb-3">
+                                    <label class="mb-2">Your Full Name</label>
+                                    <input type="text" class="form-control" name="name" id="name" placeholder="Enter your name" required data-error="Please enter your name">
+                                    <div class="help-block with-errors"></div>
                                 </div>
                             </div>
 
-                            <div class="col-lg-6 col-md-6 ">
-                                <div class="form-group mb-3 ">
-                                    <label class="mb-2 ">Your Email</label>
-                                    <input type="email " class="form-control " id="email " name="email " placeholder="Enter your email " required data-error="Please enter your email ">
-                                    <div class="help-block with-errors "></div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="form-group mb-3">
+                                    <label class="mb-2">Your Email</label>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required data-error="Please enter your email">
+                                    <div class="help-block with-errors"></div>
                                 </div>
                             </div>
 
-                            <div class="col-lg-12 col-md-12 ">
-                                <div class="form-group mb-3 ">
-                                    <label class="mb-2 ">Your Phone</label>
-                                    <input type="text " class="form-control " name="msg_phone " id="msg_subject " required data-error="Please enter your Phone " placeholder="Enter your Phone Number ">
-                                    <div class="help-block with-errors "></div>
+                            <div class="col-lg-12 col-md-12">
+                                <div class="form-group mb-3">
+                                    <label class="mb-2">Your Phone</label>
+                                    <input type="text" class="form-control" name="msg_phone" id="msg_subject" required data-error="Please enter your Phone" placeholder="Enter your Phone Number">
+                                    <div class="help-block with-errors"></div>
                                 </div>
                             </div>
 
-                            <div class="col-lg-12 col-md-12 ">
-                                <div class="form-group mb-3 ">
-                                    <label class="mb-2 ">Your Message</label>
-                                    <textarea placeholder="Enter your messsage " name="message " id="message " class="form-control " cols="30 " rows="4 " required data-error="Write your message "></textarea>
-                                    <div class="help-block with-errors "></div>
+                            <div class="col-lg-12 col-md-12">
+                                <div class="form-group mb-3">
+                                    <label class="mb-2">Your Message</label>
+                                    <textarea placeholder="Enter your messsage" name="message" id="message" class="form-control" cols="30" rows="4" required data-error="Write your message"></textarea>
+                                    <div class="help-block with-errors"></div>
                                 </div>
                             </div>
 
-                            <div class="col-lg-12 col-md-12 ">
-                                <button id="btnSubmit " type="submit " class="default-btn ">Send Message</button>
-                                <div style="display: none; " id="spinner " class="spinner-border " role="status ">
-                                    <span class="sr-only ">please wait</span>
+                            <div class="col-lg-12 col-md-12">
+                                <button id="btnSubmit" type="submit" class="default-btn">Send Message</button>
+                                <div style="display: none;" id="spinner" class="spinner-border" role="status">
+                                    <span class="sr-only">please wait</span>
                                 </div>
                                 <br>
-                                <div id="msgSubmit " class="h4 text-center hidden "></div>
-                                <div class="clearfix "></div>
+                                <div id="msgSubmit" class="h4 text-center hidden"></div>
+                                <div class="clearfix"></div>
                             </div>
                         </div>
                     </form>
@@ -813,7 +779,42 @@
         </div>
     </footer>
     <!-- End Footer Area -->
-
+    <!-- Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Full Name</label>
+                            <input type="text" class="form-control" name="name" id="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="msg_subject">Your Phone</label>
+                            <input type="text" class="form-control" name="msg_phone" id="msg_subject" placeholder="Enter your Phone Number" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea placeholder="Enter your message" name="message" id="message" class="form-control" cols="30" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-download">Send Message</button>
+                        <div id="msgSubmit" class="h4 text-center hidden">Your message has been sent successfully!</div>
+                        <div class="clearfix"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <div class="go-top "><i class="icofont-thin-up "></i></div>
@@ -843,7 +844,7 @@
         $(document).ready(function() {
             $('#contactForm').on('submit', function(e) {
                 e.preventDefault(); // Prevent default form submission
-                
+
                 // Optionally, you can add form validation or AJAX submission here
 
                 // Show the success message

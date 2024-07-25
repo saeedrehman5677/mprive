@@ -99,8 +99,8 @@ class FrontEndController
             'messageContent' => $contact->message,
         ];
         Mail::send('emails.contact', $data, function ($message) {
-            $message->to('office@mprive.com', 'Marina Views Landing')->
-            subject('Marina Views Contact Inquiry');
+            $message->to('office@mprive.com', 'dubai hills estate')->
+            subject('Dubai Hills Estate Contact Inquiry');
         });
 
         return \response()->json([
