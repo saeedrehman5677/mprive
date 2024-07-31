@@ -151,10 +151,10 @@
                             <div class="text-subtitle text-primary">Why Choose Us</div>
                             <h4 class="mt-4">Rewards from Our Clients</h4>
                         </div>
-                        <p>We are honored to have received recognition from esteemed developers such as Emaar, Nakheel, Meraas, Binghatti, and Sobha,
+                        <p class ="mb-4">We are honored to have received recognition from esteemed developers such as Emaar, Nakheel, Meraas, Binghatti, and Sobha,
                             naming us as one of their top 10 agencies. This recognition underscores our commitment to delivering outstanding results and maintaining strong relationships with developers and clients alike.
                         </p>
-                        <div class="row">
+                        <div class="row mt-4">
                             @foreach($developers as $developer)
                             <div class="col-6 col-md-4 pb-md-4">
                                 <a href="{{ url('properties') }}?developer={{ $developer->name }}">
