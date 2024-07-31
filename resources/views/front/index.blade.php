@@ -207,6 +207,18 @@
                                         class="icon icon-arrow-right2"></span> </a>
                             </div>
                         </div>
+                        <div class="box-service style-1 hover-btn-view">
+                            <div class="icon-box">
+                                <span class="icon icon-apartment"></span>
+                            </div>
+                            <div class="content">
+                                <h6 class="title">List Your Properties</h6>
+                                <p class="description">Showcasing new projects that are under development
+                                    sale.</p>
+                                <a href="{{url('contact')}}?for=listing" class="btn-view style-1"><span class="text">Learn More</span> <span
+                                        class="icon icon-arrow-right2"></span> </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -9,6 +9,7 @@ use App\Models\Contact;
 use App\Models\Developer;
 use App\Models\Faq;
 use App\Models\FaqCategory;
+use App\Models\JobOpening;
 use App\Models\PropertyType;
 use App\Models\Sale;
 use App\Models\Team;
@@ -41,7 +42,7 @@ class FrontEndController
     public  function property($slug)
     {
         $featured  = Sale::with('property_types','amenities','media')->where('featured' ,1)->take(10)->get();
-        $property  = Sale::with('property_types','','media')->where('slug', $slug)->firstOrFail();
+        $property  = Sale::with('property_types','amenities','media')->where('slug', $slug)->firstOrFail();
         return view('front.property', compact('property' ,'featured'));
     }
 
@@ -59,6 +60,11 @@ class FrontEndController
     {
         $faqs  = FaqCategory::with('categoryFaqs')->get();
         return view('front.faq' ,compact('faqs'));
+    }
+    public  function jobs()
+    {
+        $jobs  = JobOpening::all();
+        return view('front.career' ,compact('jobs'));
     }
 
     public  function lisitng()

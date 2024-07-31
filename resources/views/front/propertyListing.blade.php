@@ -59,7 +59,7 @@
                 </h5>
 
 
-                <div class="box-filter-tab">
+                {{--  <div class="box-filter-tab">
                     <ul class="nav-tab-filter" role="tablist">
                         <li class="nav-tab-item" role="presentation">
                             <a href="#gridLayout" class="nav-link-item active" data-bs-toggle="tab"><i class="icon icon-grid"></i></a>
@@ -82,7 +82,7 @@
                             <li data-value="old" class="option">Oldest</li>
                         </ul>
                     </div>
-                </div>
+                </div>  --}}
             </div>
             <div class="mt-3 mb-2 ms-2">
                 @if(request()?->query('developer'))

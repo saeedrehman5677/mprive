@@ -87,6 +87,39 @@
                 </ul>
             </li>
         @endcan
+
+           @can('property_access')
+            <li class="c-sidebar-nav-dropdown {{ request()->is("admin/property-types*") ? "c-show" : "" }} {{ request()->is("admin/amenities*") ? "c-show" : "" }} {{ request()->is("admin/sales*") ? "c-show" : "" }} {{ request()->is("admin/for-rents*") ? "c-show" : "" }} {{ request()->is("admin/new-projects*") ? "c-show" : "" }}">
+                <a class="c-sidebar-nav-dropdown-toggle" href="#">
+                    <i class="fa-fw fab fa-teamspeak c-sidebar-nav-icon">
+
+                    </i>
+                    Career
+                </a>
+                <ul class="c-sidebar-nav-dropdown-items">
+                    @can('developer_access')
+                        <li class="c-sidebar-nav-item">
+                            <a href="{{ route("admin.jobopenings.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/jobopenings") || request()->is("admin/jobopenings/*") ? "c-active" : "" }}">
+                                <i class="fa-fw fas fa-arrow-right c-sidebar-nav-icon">
+
+                                </i>
+                                Job Openings
+                            </a>
+                        </li>
+                    @endcan
+                    @can('property_type_access')
+                        <li class="c-sidebar-nav-item">
+                            <a href="{{ route("admin.job-applications.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/jobopenings") || request()->is("admin/jobopenings/*") ? "c-active" : "" }}">
+                                <i class="fa-fw fas fa-arrow-right c-sidebar-nav-icon">
+
+                                </i>
+                                Job Applications
+                            </a>
+                        </li>
+                    @endcan
+                </ul>
+            </li>
+        @endcan
         @can('faq_management_access')
             <li class="c-sidebar-nav-dropdown {{ request()->is("admin/faq-categories*") ? "c-show" : "" }} {{ request()->is("admin/faqs*") ? "c-show" : "" }}">
                 <a class="c-sidebar-nav-dropdown-toggle" href="#">

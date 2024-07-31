@@ -36,7 +36,7 @@
                         <h4 class="mt-4">Experience in Dubai Market:</h4>
                     </div>
                     <p>
-                        Our team possesses a wealth of knowledge and experience in navigating the dynamic Dubai real estate market. We have successfully handled transactions in both off-plan developments and the secondary market, catering to a diverse clientele.
+                        Our team possesses a wealth of knowledge and experience in navigating the dynamic Dubai real estate market. We have successfully handled transactions in both off-plan developments and the secondary market, catering to a diverse client.
                     </p>
                     <div class="list-view">
 

@@ -17,6 +17,7 @@ Route::get('/', 'FrontEndController@index')->name('home');
 Route::get('/contact', 'FrontEndController@contact')->name('contact');
 Route::get('/about', 'FrontEndController@about')->name('about');
 Route::get('/faq', 'FrontEndController@faq')->name('faq');
+Route::get('/career', 'FrontEndController@jobs')->name('career');
 Route::get('/properties', 'FrontEndController@lisitng')->name('listing');
 Route::get('buy/properties', 'FrontEndController@lisitng')->name('buy');
 Route::get('rent/properties', 'FrontEndController@lisitng')->name('rent');
@@ -42,6 +43,14 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     // Permissions
     Route::delete('permissions/destroy', 'PermissionsController@massDestroy')->name('permissions.massDestroy');
     Route::resource('permissions', 'PermissionsController');
+
+    Route::delete('jobopenings/{jobOpening}', 'JobOpeningController@destroy')->name('jobopenings.destroy');
+    Route::get('jobopenings/{jobOpening}/edit', 'JobOpeningController@edit')->name('jobopenings.edit');
+    Route::put('jobopenings/{jobOpening}', 'JobOpeningController@update')->name('jobopenings.update');
+    Route::resource('jobopenings', 'JobOpeningController');
+
+    Route::get('job-applications', 'JobApplicationController@index')->name('job-applications.index');
+    Route::get('job-applications/{id}', 'JobApplicationController@show')->name('job-applications.show');
 
     // Roles
     Route::delete('roles/destroy', 'RolesController@massDestroy')->name('roles.massDestroy');

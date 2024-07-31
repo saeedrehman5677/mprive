@@ -67,6 +67,7 @@
                             <li><a href="{{url('blogs')}}" class="caption-1 text-variant-2">News</a></li>
                             <li><a href="{{url('about')}}" class="caption-1 text-variant-2">About Us</a></li>
                             <li><a href="{{url('contact')}}" class="caption-1 text-variant-2">Contact Us</a></li>
+                            <li><a href="{{url('career')}}" class="caption-1 text-variant-2">Career</a></li>
 
                         </ul>
                     </div>
