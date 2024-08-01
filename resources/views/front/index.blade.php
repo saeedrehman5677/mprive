@@ -156,22 +156,16 @@
             </p>
             <div class="row mt-4">
                 @foreach($developers as $developer)
-                <div class="col-6 col-md-4 pb-md-4">
-                    <a href="{{ url('properties') }}?developer={{ $developer->name }}">
-                        <img class="img" src="{{ $developer->image ? $developer->image->url : '' }}">
-                    </a>
+                <div class="col-12 col-md-6 pb-4">
+                    <div class="box-service style-1 hover-btn-view">
+                        <a href="{{ url('properties') }}?developer={{ $developer->name }}">
+                            <div class="icon-box">
+                                <img class="img" src="{{ $developer->image ? $developer->image->url : '' }}" alt="{{ $developer->name }}">
+                            </div>
+                        </a>
+                    </div>
                 </div>
                 @endforeach
-            </div>
-            <div class="box-service style-1 hover-btn-view mt-4">
-                <div class="icon-box">
-                    <span class="icon icon-buy-home"></span>
-                </div>
-                <div class="content">
-                    <h6 class="title">Buy A New Property</h6>
-                    <p class="description">Explore diverse properties and expert guidance for a seamless buying experience.</p>
-                    <a href="{{url('buy/properties')}}" class="btn-view style-1"><span class="text">Buy Now</span> <span class="icon icon-arrow-right2"></span> </a>
-                </div>
             </div>
             <a href="{{ url('contact') }}" class="btn-view"><span class="text">Contact Us</span> <span class="icon icon-arrow-right2"></span> </a>
         </div>
