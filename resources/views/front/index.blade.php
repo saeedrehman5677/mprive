@@ -144,84 +144,84 @@
     <!-- Service -->
     <section class="flat-section-v3 flat-service-v2 bg-surface">
         <div class="container">
-            <div class="row wrap-service-v2">
-                <div class="col-lg-6">
-                    <div class="box-left wow fadeInLeftSmall" data-wow-delay=".1s" data-wow-duration="1000ms">
-                        <div class="box-title">
-                            <div class="text-subtitle text-primary">Why Choose Us</div>
-                            <h4 class="mt-4">Rewards from Our Clients</h4>
-                        </div>
-                        <p class ="mb-4">We are honored to have received recognition from esteemed developers such as Emaar, Nakheel, Meraas, Binghatti, and Sobha,
-                            naming us as one of their top 10 agencies. This recognition underscores our commitment to delivering outstanding results and maintaining strong relationships with developers and clients alike.
-                        </p>
-                        <div class="row mt-4">
-                            @foreach($developers as $developer)
-                            <div class="col-6 col-md-4 pb-md-4">
-                                <a href="{{ url('properties') }}?developer={{ $developer->name }}">
-                                    <img class="img" src="{{ $developer->image ? $developer->image->url : '' }}" >
-                                </a>
-                            </div>
-                        @endforeach
-
-                        </div>
-                        <a href="{{ url('contact') }}" class="btn-view"><span class="text">Contact Us</span> <span
-                                class="icon icon-arrow-right2"></span> </a>
-                    </div>
-
+        <div class="row wrap-service-v2">
+    <div class="col-lg-6">
+        <div class="box-left wow fadeInLeftSmall" data-wow-delay=".1s" data-wow-duration="1000ms">
+            <div class="box-title">
+                <div class="text-subtitle text-primary">Why Choose Us</div>
+                <h4 class="mt-4">Rewards from Our Clients</h4>
+            </div>
+            <p class="mb-4">We are honored to have received recognition from esteemed developers such as Emaar, Nakheel, Meraas, Binghatti, and Sobha,
+                naming us as one of their top 10 agencies. This recognition underscores our commitment to delivering outstanding results and maintaining strong relationships with developers and clients alike.
+            </p>
+            <div class="row mt-4">
+                @foreach($developers as $developer)
+                <div class="col-6 col-md-4 pb-md-4">
+                    <a href="{{ url('properties') }}?developer={{ $developer->name }}">
+                        <img class="img" src="{{ $developer->image ? $developer->image->url : '' }}">
+                    </a>
                 </div>
-                <div class="col-lg-6">
-                    <div class="box-right wow fadeInRightSmall" data-wow-delay=".2s" data-wow-duration="2000ms">
-                        <div class="box-service style-1 hover-btn-view">
-                            <div class="icon-box">
-                                <span class="icon icon-buy-home"></span>
-                            </div>
-                            <div class="content">
-                                <h6 class="title">Buy A New Property</h6>
-                                <p class="description">Explore diverse properties and expert guidance for a seamless
-                                    buying experience.</p>
-                                <a href="{{url('buy/properties')}}" class="btn-view style-1"><span class="text">Buy Now</span> <span
-                                        class="icon icon-arrow-right2"></span> </a>
-                            </div>
-                        </div>
-                        <div class="box-service style-1 hover-btn-view">
-                            <div class="icon-box">
-                                <span class="icon icon-rent-home"></span>
-                            </div>
-                            <div class="content">
-                                <h6 class="title">Rent a Property</h6>
-                                <p class="description">Explore a diverse variety of listings tailored precisely to
-                                    suit your unique lifestyle needs.</p>
-                                <a href="{{url('rent/properties')}}" class="btn-view style-1"><span class="text">Rent Now</span> <span
-                                        class="icon icon-arrow-right2"></span> </a>
-                            </div>
-                        </div>
-                        <div class="box-service style-1 hover-btn-view">
-                            <div class="icon-box">
-                                <span class="icon icon-apartment"></span>
-                            </div>
-                            <div class="content">
-                                <h6 class="title">See new Projects</h6>
-                                <p class="description">Showcasing new projects that are under development
-                                    sale.</p>
-                                <a href="{{url('projects/properties')}}" class="btn-view style-1"><span class="text">Learn More</span> <span
-                                        class="icon icon-arrow-right2"></span> </a>
-                            </div>
-                        </div>
-                        <div class="box-service style-1 hover-btn-view">
-                            <div class="icon-box">
-                                <span class="icon icon-apartment"></span>
-                            </div>
-                            <div class="content">
-                                <h6 class="title">List Your Properties</h6>
-                                <p class="description">Showcasing new projects that are under development
-                                    sale.</p>
-                                <a href="{{url('contact')}}?for=listing" class="btn-view style-1"><span class="text">Learn More</span> <span
-                                        class="icon icon-arrow-right2"></span> </a>
-                            </div>
-                        </div>
-                    </div>
+                @endforeach
+            </div>
+            <div class="box-service style-1 hover-btn-view mt-4">
+                <div class="icon-box">
+                    <span class="icon icon-buy-home"></span>
+                </div>
+                <div class="content">
+                    <h6 class="title">Buy A New Property</h6>
+                    <p class="description">Explore diverse properties and expert guidance for a seamless buying experience.</p>
+                    <a href="{{url('buy/properties')}}" class="btn-view style-1"><span class="text">Buy Now</span> <span class="icon icon-arrow-right2"></span> </a>
                 </div>
             </div>
+            <a href="{{ url('contact') }}" class="btn-view"><span class="text">Contact Us</span> <span class="icon icon-arrow-right2"></span> </a>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="box-right wow fadeInRightSmall" data-wow-delay=".2s" data-wow-duration="2000ms">
+            <div class="box-service style-1 hover-btn-view">
+                <div class="icon-box">
+                    <span class="icon icon-buy-home"></span>
+                </div>
+                <div class="content">
+                    <h6 class="title">Buy A New Property</h6>
+                    <p class="description">Explore diverse properties and expert guidance for a seamless buying experience.</p>
+                    <a href="{{url('buy/properties')}}" class="btn-view style-1"><span class="text">Buy Now</span> <span class="icon icon-arrow-right2"></span> </a>
+                </div>
+            </div>
+            <div class="box-service style-1 hover-btn-view">
+                <div class="icon-box">
+                    <span class="icon icon-rent-home"></span>
+                </div>
+                <div class="content">
+                    <h6 class="title">Rent a Property</h6>
+                    <p class="description">Explore a diverse variety of listings tailored precisely to suit your unique lifestyle needs.</p>
+                    <a href="{{url('rent/properties')}}" class="btn-view style-1"><span class="text">Rent Now</span> <span class="icon icon-arrow-right2"></span> </a>
+                </div>
+            </div>
+            <div class="box-service style-1 hover-btn-view">
+                <div class="icon-box">
+                    <span class="icon icon-apartment"></span>
+                </div>
+                <div class="content">
+                    <h6 class="title">See new Projects</h6>
+                    <p class="description">Showcasing new projects that are under development sale.</p>
+                    <a href="{{url('projects/properties')}}" class="btn-view style-1"><span class="text">Learn More</span> <span class="icon icon-arrow-right2"></span> </a>
+                </div>
+            </div>
+            <div class="box-service style-1 hover-btn-view">
+                <div class="icon-box">
+                    <span class="icon icon-apartment"></span>
+                </div>
+                <div class="content">
+                    <h6 class="title">List Your Properties</h6>
+                    <p class="description">Showcasing new projects that are under development sale.</p>
+                    <a href="{{url('contact')}}?for=listing" class="btn-view style-1"><span class="text">Learn More</span> <span class="icon icon-arrow-right2"></span> </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
         </div>
     </section>
     <!-- End Service -->
