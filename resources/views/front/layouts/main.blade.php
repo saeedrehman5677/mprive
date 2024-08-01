@@ -38,34 +38,6 @@
         font-size: 50px;
         z-index: 100;
     }
-    @media (max-width: 576px) {
-        .box-left .row .col-6,
-        .box-left .row .col-md-4 {
-            padding: 5px;
-            text-align: center;
-        }
-
-        .box-left .row img {
-            width: 100%;
-            height: auto;
-            display: inline-block;
-        }
-
-        .btn-view {
-            display: block;
-            margin: 20px auto;
-            text-align: center;
-        }
-    }
-
-    @media (min-width: 577px) {
-        .box-left .row img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-    }
-
 </style>
 <a style="color:white" target="_blank" rel="noopener" href="https://api.whatsapp.com/send?phone=971544223163" class="w-float">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" height="70" width="70">
