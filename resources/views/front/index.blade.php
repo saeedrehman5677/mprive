@@ -156,7 +156,7 @@
                         </p>
                         <div class="row mt-4">
                             @foreach($developers as $developer)
-                            <div class="col-6 col-md-6 pb-md-6">
+                            <div class="col-6 col-md-12 pb-md-12">
                                 <a href="{{ url('properties') }}?developer={{ $developer->name }}">
                                     <img class="img" src="{{ $developer->image ? $developer->image->url : '' }}" >
                                 </a>
