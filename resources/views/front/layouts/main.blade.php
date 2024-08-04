@@ -30,7 +30,7 @@
     }
     .w-float1 {
         position: fixed;
-        bottom: 15px;
+        bottom: 20px;
         right: 15px;
         color: #fff;
         border-radius: 80px;
