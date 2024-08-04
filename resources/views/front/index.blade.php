@@ -16,7 +16,6 @@
             <div class="box-title style-1 wow fadeInUpSmall" data-wow-delay=".2s" data-wow-duration="2000ms">
                 <div class="box-left">
                     <div class="text-subtitle text-primary">Property Type</div>
-                    <h4 class="mt-4">Try Searching For</h4>
                 </div>
                 <a href="{{url('properties')}}" class="btn-view"><span class="text">View All </span> <span
                         class="icon icon-arrow-right2"></span> </a>
