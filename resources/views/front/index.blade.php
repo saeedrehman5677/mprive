@@ -155,7 +155,7 @@
             </p>
             <div class="row mt-4">
                 @foreach($developers as $developer)
-                <div class="col-12 col-md-4 pb-4">
+                <div class="col-6 col-md-4 pb-4">
                     <div class="box-service style-1 hover-btn-view">
                         <a href="{{ url('properties') }}?developer={{ $developer->name }}">
                             <div class="icon-box">
