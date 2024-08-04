@@ -155,7 +155,7 @@
             </p>
             <div class="row mt-4">
                 @foreach($developers as $developer)
-                <div class="col-12 col-md-6 pb-4">
+                <div class="col-12 col-md-4 pb-4">
                     <div class="box-service style-1 hover-btn-view">
                         <a href="{{ url('properties') }}?developer={{ $developer->name }}">
                             <div class="icon-box">
@@ -176,7 +176,7 @@
                     <span class="icon icon-buy-home"></span>
                 </div>
                 <div class="content">
-                    <h6 class="title">Buy A New Property</h6>
+                    <h6 class="title">Property for sale </h6>
                     <p class="description">Explore diverse properties and expert guidance for a seamless buying experience.</p>
                     <a href="{{url('buy/properties')}}" class="btn-view style-1"><span class="text">Buy Now</span> <span class="icon icon-arrow-right2"></span> </a>
                 </div>
@@ -186,7 +186,7 @@
                     <span class="icon icon-rent-home"></span>
                 </div>
                 <div class="content">
-                    <h6 class="title">Rent a Property</h6>
+                    <h6 class="title">Property for rent</h6>
                     <p class="description">Explore a diverse variety of listings tailored precisely to suit your unique lifestyle needs.</p>
                     <a href="{{url('rent/properties')}}" class="btn-view style-1"><span class="text">Rent Now</span> <span class="icon icon-arrow-right2"></span> </a>
                 </div>
