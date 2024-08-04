@@ -78,7 +78,7 @@
                         <ul class="mt-10 navigation-menu-footer">
                             <li><a href="{{ url('buy/properties') }}" class="caption-1 text-variant-2">Property For Sale</a></li>
                             <li><a href="{{ url('rent/properties') }}" class="caption-1 text-variant-2">Property For Rent</a></li>
-                            <li><a href="{{ url('projects/properties') }}" class="caption-1 text-variant-2">New Property Projects</a></li>
+                            <li><a href="{{ url('projects/properties') }}" class="caption-1 text-variant-2">Off plan Projects</a></li>
                         </ul>
                     </div>
                 </div>

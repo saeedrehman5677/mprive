@@ -197,7 +197,7 @@
                     <span class="icon icon-apartment"></span>
                 </div>
                 <div class="content">
-                    <h6 class="title">See new Projects</h6>
+                    <h6 class="title">Off plan Projects</h6>
                     <p class="description">Showcasing new projects that are under development sale.</p>
                     <a href="{{url('projects/properties')}}" class="btn-view style-1"><span class="text">Learn More</span> <span class="icon icon-arrow-right2"></span> </a>
                 </div>
