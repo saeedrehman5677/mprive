@@ -8,7 +8,7 @@
     <div class="row justify-content-center">
         <div class="col-md-6">
             <div class="" style="text-align: center">
-                <img style="width:200px" class="img" src="{{asset('img/logo-white.png')}}">
+                <img style="width:200px" class="img" src="{{asset('img/logo-white-updated.png')}}">
             </div>
             <div class="card mx-4">
                 <div class="card-body p-4">

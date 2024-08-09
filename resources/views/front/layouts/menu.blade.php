@@ -2,15 +2,19 @@
     <!-- Header Lower -->
     <div class="header-lower">
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-md-5 col-6">
+                <div class="logo-box flex">
+                    <div class="">
+                        <a href="{{url('')}}">
+                            <img id="trans-logo" src="{{ url('/img/logo-white-updated.png') }}"
+                                 alt="logo" width="130" height="60"></a></div>
+                </div>
+            </div>
+            <div class="col-lg-7">
+
                 <div class="inner-container d-flex justify-content-between align-items-center">
                     <!-- Logo Box -->
-                    <div class="logo-box flex">
-                        <div class="">
-                            <a href="{{url('')}}">
-                                <img id="trans-logo" src="{{ url('/img/logo-white.png') }}"
-                                 alt="logo" width="200" height="60"></a></div>
-                    </div>
+
                     <div class="nav-outer flex align-center">
                         <!-- Main Menu -->
                         <nav class="main-menu show navbar-expand-md">
@@ -45,8 +49,12 @@
     <div class="mobile-menu">
         <div class="menu-backdrop"></div>
         <nav class="menu-box">
-            <div class="nav-logo"><a href="{{url('/')}}"><img src=" {{ url('img/logo-white.png') }}" alt="nav-logo"
-                                                            width="200" height="60"></a></div>
+            <div class="nav-logo">
+                <a href="{{url('/')}}">
+                    <img src=" {{ url('img/logo-white-updated.png') }}" alt="nav-logo"
+                                                            width="80" height="60">
+                </a>
+            </div>
             <div class="bottom-canvas">
                 <div class="menu-outer"></div>
                 <div class="mobi-icon-box">

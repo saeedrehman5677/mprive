@@ -10,7 +10,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="" style="text-align: center">
-                    <img style="width:200px" class="img" src="{{asset('img/logo-white.png')}}">
+                    <img style="width:200px" class="img" src="{{asset('img/logo-white-updated.png')}}">
                 </div>
                 <div class="card">
                     <div class="card-header">{{ __('Verify Your Email Address') }}</div>

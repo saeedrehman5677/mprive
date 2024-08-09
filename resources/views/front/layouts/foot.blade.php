@@ -4,7 +4,7 @@
         <div class="container">
             <div class="content-footer-top">
                 <div class="footer-logo">
-                    <img src="{{asset('img/logo-white.png')}}" alt="logo-footer" width="200" height="60">
+                    <img src="{{asset('img/logo-white-updated.png')}}" alt="logo-footer" width="200" height="60">
                 </div>
                 <div class="wd-social">
                     <span>Follow Us:</span>

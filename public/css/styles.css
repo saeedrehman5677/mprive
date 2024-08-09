@@ -728,7 +728,7 @@ label {
 .main-header {
   z-index: 999;
   width: 100%;
-  height: 80px;
+  height: 100px;
   position: relative;
   border-bottom: 1px solid rgba(228, 228, 228, 0.43);
     background-color: #161e2d;
@@ -738,7 +738,7 @@ label {
   padding-right: 30px;
 }
 .main-header.header-style-2 {
-  margin-bottom: -80px;
+  margin-bottom: -100px;
   border: 0;
   background-color: transparent;
   -webkit-transition: all 0.5s ease;
@@ -10144,7 +10144,10 @@ tr {
     }
     #trans-logo {
         height: auto;
-        width: 148px;
+        width: 100px;
+    }
+    .main-header.header-style-2.is-fixed #trans-logo{
+        width: 65px;
     }
     .grid-location {
         display: grid;

@@ -6,7 +6,7 @@
                 <div class="inner-container d-flex justify-content-between align-items-center">
                     <!-- Logo Box -->
                     <div class="logo-box flex">
-                        <div class="logo"><a href="{{url('/')}}"><img src="{{asset('img/logo-white.png')}}" alt="logo" width="200" height="60"></a></div>
+                        <div class="logo"><a href="{{url('/')}}"><img src="{{asset('img/logo-white-updated.png')}}" alt="logo" width="80" height="60"></a></div>
                     </div>
                     <div class="nav-outer">
                         <nav class="main-menu show navbar-expand-md">
@@ -42,7 +42,7 @@
         <div class="menu-backdrop"></div>
         <nav class="menu-box">
             <div class="nav-logo">
-                <a href="{{ url('/') }}"><img src="{{ asset('img/logo-white.png')}}" alt="nav-logo" width="200" height="60"></a></div>
+                <a href="{{ url('/') }}"><img src="{{ asset('img/logo-white-updated.png')}}" alt="nav-logo" width="200" height="60"></a></div>
             <div class="bottom-canvas">
                 <div class="menu-outer"></div>
                 <div class="button-mobi-sell">

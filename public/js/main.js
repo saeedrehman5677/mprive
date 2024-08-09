@@ -47,18 +47,18 @@
     var retina = window.devicePixelRatio > 1 ? true : false;
     if (retina) {
       $("#site-logo-inner").find("img").attr({
-        src: "img/logo-white.png",
+        src: "img/logo-white-updated.png",
         width: "197",
         height: "48",
       });
 
       $("#logo-footer.style").find("img").attr({
-        src: "img/logo-white.png",
+        src: "img/logo-white-updated.png",
         width: "197",
         height: "48",
       });
       $("#logo-footer.style2").find("img").attr({
-        src: "img/logo-white.png",
+        src: "img/logo-white-updated.png",
         width: "197",
         height: "48",
       });
@@ -130,11 +130,13 @@
           if ($(window).scrollTop() > 0) {
             nav.addClass("is-fixed");
             injectSpace.show();
-            $("#trans-logo").attr("src", "img/logo-white.png");
+            $("#trans-logo").attr("src", "img/logo-white-updated.png");
+              $("#trans-logo").attr("width", "80");
           } else {
             nav.removeClass("is-fixed");
             injectSpace.hide();
-            $("#trans-logo").attr("src", "img/logo-white.png");
+            $("#trans-logo").attr("src", "img/logo-white-updated.png");
+              $("#trans-logo").attr("width", "140");
           }
         });
       }

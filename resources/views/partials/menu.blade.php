@@ -1,7 +1,7 @@
 <div id="sidebar" class="c-sidebar c-sidebar-fixed c-sidebar-lg-show">
 
     <div class="c-sidebar-brand d-md-down-none"  style="text-align: center ;  margin-bottom: 15px">
-        <img style="width:150px" class="img" src="{{asset('img/logo-white.png')}}">
+        <img style="width:150px" class="img" src="{{asset('img/logo-white-updated.png')}}">
     </div>
 
     <ul class="c-sidebar-nav">
