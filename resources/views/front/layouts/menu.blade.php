@@ -8,7 +8,7 @@
                     <div class="logo-box flex">
                         <div class="">
                             <a href="{{url('')}}">
-                                <img id="trans-logo" src="{{ url('/img/logo-white.png') }}"
+                                <img id="trans-logo" src="{{ url('/img/logo-white1.png') }}"
                                  alt="logo" width="200" height="60"></a></div>
                     </div>
                     <div class="nav-outer flex align-center">
