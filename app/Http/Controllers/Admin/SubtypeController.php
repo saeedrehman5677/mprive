@@ -48,6 +48,7 @@ class SubtypeController extends Controller
     {
         $subtype->delete();
 
+
         return back();
     }
 
