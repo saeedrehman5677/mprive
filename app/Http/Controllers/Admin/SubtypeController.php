@@ -50,4 +50,7 @@ class SubtypeController extends Controller
 
         return back();
     }
+
+
+
 }
