@@ -17,7 +17,7 @@
                     <label for="parent_property_id">Parent Property Type</label>
                     <select name="parent_property_id" class="form-control" required>
                         @foreach($propertyTypes as $id => $propertyType)
-                            <option value="{{ $id }}">{{ $propertyType->name }}</option>
+                            <option value="{{ $propertyType->id }}">{{ $propertyType->name }}</option>
                         @endforeach
                     </select>
                 </div>

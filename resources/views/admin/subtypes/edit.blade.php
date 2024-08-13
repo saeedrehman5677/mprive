@@ -17,8 +17,8 @@
                 <div class="form-group">
                     <label for="parent_property_id">Parent Property Type</label>
                     <select name="parent_property_id" class="form-control" required>
-                        @foreach($propertyTypes as $id => $propertyType)
-                            <option value="{{ $id }}" {{ $id == $subtype->parent_property_id ? 'selected' : '' }}>{{ $propertyType->name ?? ' ' }}</option>
+                        @foreach($propertyTypes as  $propertyType)
+                            <option value="{{ $propertyType->id }}" {{ $propertyType->id == $subtype->parent_property_id ? 'selected' : '' }}>{{ $propertyType->name ?? ' ' }}</option>
                         @endforeach
                     </select>
                 </div>
