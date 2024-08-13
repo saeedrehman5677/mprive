@@ -63,6 +63,17 @@
                         </li>
                     @endcan
 
+                    @can('property_type_access')
+                        <li class="c-sidebar-nav-item">
+                            <a href="{{ route("admin.subtypes.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/property-types") || request()->is("admin/property-types/*") ? "c-active" : "" }}">
+                                <i class="fa-fw fas fa-arrow-right c-sidebar-nav-icon">
+
+                                </i>
+                                Property Sub Types
+                            </a>
+                        </li>
+                    @endcan
+
                     @can('amenity_access')
                         <li class="c-sidebar-nav-item">
                             <a href="{{ route("admin.amenities.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/amenities") || request()->is("admin/amenities/*") ? "c-active" : "" }}">

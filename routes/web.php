@@ -99,6 +99,9 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::post('property-types/media', 'PropertyTypeController@storeMedia')->name('property-types.storeMedia');
     Route::post('property-types/ckmedia', 'PropertyTypeController@storeCKEditorImages')->name('property-types.storeCKEditorImages');
     Route::resource('property-types', 'PropertyTypeController');
+    Route::resource('subtypes', 'App\Http\Controllers\Admin\SubtypeController');
+
+
 
     // Developer
     Route::delete('developers/destroy', 'DeveloperController@massDestroy')->name('developers.massDestroy');
