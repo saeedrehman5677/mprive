@@ -48,7 +48,7 @@ class PropertySearch extends Component
         if ($type && $type !== 'any') {
             $Ptype  = PropertyType::where('name', $type)->first();
             if ($Ptype) {
-                $this->subTypes = \App\Models\SubType::where('parent_property_id', $Ptype->id)->get();
+                $this->subTypes = \App\Models\Subtype::where('parent_property_id', $Ptype->id)->get();
             }
         } else {
             $this->subTypes = [];
