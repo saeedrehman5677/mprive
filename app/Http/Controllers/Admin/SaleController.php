@@ -12,6 +12,7 @@ use App\Models\Amenity;
 use App\Models\Developer;
 use App\Models\PropertyType;
 use App\Models\Sale;
+use App\Models\Subtype;
 use App\Models\User;
 use Gate;
 use Illuminate\Http\Request;
@@ -87,13 +88,16 @@ class SaleController extends Controller
         $users = User::pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
         $developers = Developer::pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
 
-        return view('admin.sales.create', compact('amenities', 'developers', 'property_types', 'users'));
+        $subTypes = SubType::all()->pluck('name', 'id');
+
+        return view('admin.sales.create', compact('amenities', 'developers', 'property_types', 'users' ,'subTypes'));
     }
 
     public function store(StoreSaleRequest $request)
     {
         $sale = Sale::create($request->all());
         $sale->property_types()->sync($request->input('property_types', []));
+        $sale->subProperty()->sync($request->input('sub_types', []));
         $sale->amenities()->sync($request->input('amenities', []));
         if ($request->input('featured_image', false)) {
             $sale->addMedia(storage_path('tmp/uploads/' . basename($request->input('featured_image'))))->toMediaCollection('featured_image');
@@ -125,9 +129,11 @@ class SaleController extends Controller
         $users = User::pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
         $developers = Developer::pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
 
-        $sale->load('property_types', 'amenities', 'user');
+        $subTypes = SubType::all()->pluck('name', 'id');
 
-        return view('admin.sales.edit', compact('amenities' ,'developers', 'property_types', 'sale', 'users'));
+        $sale->load('property_types', 'amenities', 'user' ,'subProperty');
+
+        return view('admin.sales.edit', compact('amenities' ,'developers', 'property_types', 'sale', 'users' ,'subTypes'));
     }
 
     public function update(UpdateSaleRequest $request, Sale $sale)
@@ -135,6 +141,8 @@ class SaleController extends Controller
         $sale->update($request->all());
         $sale->property_types()->sync($request->input('property_types', []));
         $sale->amenities()->sync($request->input('amenities', []));
+        $sale->subProperty()->sync($request->input('sub_types', []));
+
         if ($request->input('featured_image', false)) {
             if (! $sale->featured_image || $request->input('featured_image') !== $sale->featured_image->file_name) {
                 if ($sale->featured_image) {
@@ -217,4 +225,12 @@ class SaleController extends Controller
 
         return response()->json(['id' => $media->id, 'url' => $media->getUrl()], Response::HTTP_CREATED);
     }
+
+    public function fetchSubTypes(Request $request)
+    {
+        $subTypes = SubType::whereIn('parent_property_id', $request->property_type_ids)->pluck('name', 'id');
+
+        return response()->json(['subTypes' => $subTypes]);
+    }
+
 }

@@ -184,4 +184,8 @@ class Sale extends Model implements HasMedia
     {
         return $this->belongsTo(Developer::class, 'developer');
     }
+    public function subProperty()
+    {
+        return $this->belongsToMany(Subtype::class);
+    }
 }

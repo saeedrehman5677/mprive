@@ -134,7 +134,7 @@
                                             <div class="form-style">
                                                 <label class="title-select">Type</label>
                                                 <div class="group-select">
-                                                    <select wire:model="type" class="nice-select">
+                                                    <select wire:click="type"  wire:change="fetchSubTypes($event.target.value)"  class="nice-select">
                                                         <option value="any">Any</option>
                                                         @foreach($types as $type)
                                                             <option value="{{ $type->name }}">{{ $type->name }}</option>
@@ -142,6 +142,19 @@
                                                     </select>
                                                 </div>
                                             </div>
+
+
+                                                <div class="form-style">
+                                                    <label class="title-select">Sub Type</label>
+                                                    <div class="group-select">
+                                                        <select  wire:model="subType" class="nice-select">
+                                                            <option value="any">Any</option>
+                                                            @foreach($subTypes as $subType)
+                                                                <option value="{{ $subType->name }}">{{ $subType->name }}</option>
+                                                            @endforeach
+                                                        </select>
+                                                    </div>
+                                                </div>
 
                                             <div class="row">
                                                 <div class="col-md-6">
@@ -252,7 +265,7 @@
                                     <div class="archive-top">
                                         <a href="{{ url('properties', $property->slug) }}" class="images-group">
                                             <div class="images-style">
-                                                <img style="min-height: 300px" src="{{ $property->featured_image->url }}">
+                                                <img style="min-height: 300px" src="{{ $property?->featured_image?->url }}">
                                             </div>
                                             <div class="top">
                                                 <ul class="d-flex gap-8 flex-row">

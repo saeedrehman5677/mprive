@@ -16,6 +16,7 @@ class PropertySearch extends Component
     public $s;
     public $emirate = 'all';
     public $type = 'any';
+    public $subType = 'any';
     public $property_status = "any";
     public $bathrooms = '';
     public $bedrooms = '';
@@ -25,7 +26,7 @@ class PropertySearch extends Component
     public $maxSize;
     public $amenities = [];
     public $developer = [];
-
+    public $subTypes =[];
 
     public function mount()
     {
@@ -42,12 +43,17 @@ class PropertySearch extends Component
             $this->property_status = request()->query('property_status');
         }
     }
-
-    public function updateListingType($type)
+    public function fetchSubTypes($type)
     {
-        $this->property_status = $type;
+        if ($type && $type !== 'any') {
+            $Ptype  = PropertyType::where('name', $type)->first();
+            if ($Ptype) {
+                $this->subTypes = \App\Models\SubType::where('parent_property_id', $Ptype->id)->get();
+            }
+        } else {
+            $this->subTypes = [];
+        }
     }
-
     public function render()
     {
         $types = PropertyType::with('media')->withCount('propertyTypeSales')->take(10)->get();
@@ -92,6 +98,11 @@ class PropertySearch extends Component
             ->when($this->type !== 'any', function ($query) {
                 $query->whereHas('property_types', function ($q) {
                     $q->where('name', $this->type);
+                });
+            })
+            ->when($this->subType !== 'any', function ($query) {
+                $query->whereHas('subProperty', function ($q) {
+                    $q->where('name', $this->subType);
                 });
             })
             ->when($this->minPrice, function ($query) {

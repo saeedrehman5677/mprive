@@ -88,6 +88,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::post('sales/ckmedia', 'SaleController@storeCKEditorImages')->name('sales.storeCKEditorImages');
     Route::post('sales/parse-csv-import', 'SaleController@parseCsvImport')->name('sales.parseCsvImport');
     Route::post('sales/process-csv-import', 'SaleController@processCsvImport')->name('sales.processCsvImport');
+    Route::post('sales/fetch-subtypes', 'SaleController@fetchSubTypes')->name('sales.fetchSubTypes');
+
     Route::resource('sales', 'SaleController');
 
     // For Rent

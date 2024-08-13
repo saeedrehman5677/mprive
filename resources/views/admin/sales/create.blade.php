@@ -218,6 +218,8 @@
                                 <span
                                     class="help-block">{{ trans('cruds.sale.fields.publishing_status_helper') }}</span>
                             </div>
+
+
                             <div class="form-group col-md-6">
                                 <label for="property_types">{{ trans('cruds.sale.fields.property_type') }}</label>
                                 <div style="padding-bottom: 4px">
@@ -241,6 +243,31 @@
                                 @endif
                                 <span class="help-block">{{ trans('cruds.sale.fields.property_type_helper') }}</span>
                             </div>
+
+
+                            <div class="form-group col-md-6">
+                                <label for="property_types">Sub Property Types</label>
+                                <div style="padding-bottom: 4px">
+                            <span class="btn btn-info btn-xs select-all"
+                                  style="border-radius: 0">{{ trans('global.select_all') }}</span>
+                                    <span class="btn btn-info btn-xs deselect-all"
+                                          style="border-radius: 0">{{ trans('global.deselect_all') }}</span>
+                                </div>
+                                <select
+                                    class="form-control select2 {{ $errors->has('property_types') ? 'is-invalid' : '' }}"
+                                    name="sub_types[]" id="sub_types" multiple>
+                                    @foreach($subTypes as $id => $type)
+                                        <option
+                                            value="{{ $id }}" {{ in_array($id, old('property_types', [])) ? 'selected' : '' }}>{{ $type }}</option>
+                                    @endforeach
+                                </select>
+                                @if($errors->has('sub_property_types'))
+                                    <div class="invalid-feedback">
+                                        {{ $errors->first('sub_property_types') }}
+                                    </div>
+                                @endif
+                            </div>
+
                             <div class="form-group col-md-6">
                                 <label for="amenities">{{ trans('cruds.sale.fields.amenities') }}</label>
                                 <div style="padding-bottom: 4px">
@@ -446,6 +473,38 @@
 @endsection
 
 @section('scripts')
+    <script>
+        $('#property_types').select2().on('select2:select', function (e) {
+            let propertyTypeIds = $(this).val();
+
+            $.ajax({
+                url: "{{ route('admin.sales.fetchSubTypes') }}",
+                type: "POST",
+                data: {
+                    property_type_ids: propertyTypeIds,
+                    _token: "{{ csrf_token() }}"
+                },
+                success: function (response) {
+                    let subTypesSelect = $('#sub_types');
+
+                    // Clear existing options
+                    subTypesSelect.empty();
+
+                    // Append new options
+                    $.each(response.subTypes, function (id, name) {
+                        let newOption = new Option(name, id, false, false);
+                        $(newOption).attr('data-custom-attribute', 'value-' + id); // Add custom attribute
+                        subTypesSelect.append(newOption);
+                    });
+
+                    // Refresh the Select2 control
+                    subTypesSelect.val(null).trigger('change'); // Reset selection
+                    subTypesSelect.select2(); // Re-initialize Select2
+                }
+            });
+        });
+
+    </script>
     <script>
         $(document).ready(function () {
             function SimpleUploadAdapter(editor) {
