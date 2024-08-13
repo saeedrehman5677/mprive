@@ -26,7 +26,7 @@
                 <a href="https://youtu.be/MLpWrANjFbI" data-fancybox="gallery2" class="box-icon">
                     <span class="icon icon-play2"></span>
                 </a>
-                <a href="{{$property->featured_image->url}}"  data-fancybox="gallery" class="tf-btn primary">View All Photos</a>
+                <a href="{{$property?->featured_image?->url}}"  data-fancybox="gallery" class="tf-btn primary">View All Photos</a>
             </div>
 
         </div>

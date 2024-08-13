@@ -271,7 +271,7 @@
                 <div class="homeya-box list-style-1">
                     <a href="{{ url('properties' ,$property->slug)}}" class="images-group">
                         <div class="images-style">
-                            <img  style="max-height: 240px" src="{{$property?->featured_image->url}}" alt="img">
+                            <img  style="max-height: 240px" src="{{$property?->featured_image?->url}}" alt="img">
                         </div>
                         <div class="top">
                             <ul class="d-flex gap-4 flex-row">
@@ -349,7 +349,7 @@
                 <div class="box col-lg-4 col-sm-6">
                     <div class="box-agent style-1 hover-img">
                         <div href="#" class="box-img img-style">
-                            {{$agent->featured_image}}
+                            {{$agent?->featured_image}}
                             <ul class="agent-social">
                                 <li> <a href="{{$agent->facebook}}"><span class="icon icon-facebook"></span></a> </li>
                                 <li><a href="{{$agent->linkedin}}"> <span class="icon icon-linkedin"></span> </a></li>
@@ -384,7 +384,7 @@
                 <div class="box col-lg-4 col-md-6">
                     <a href="{{ url('blogs', $blog->slug) }}" class="flat-blog-item hover-img">
                         <div class="img-style">
-                            {{$blog->featured_image}}
+                            {{$blog?->featured_image}}
                             <span class="date-post">{{$blog->updated_at->diffForHumans()}}</span>
                         </div>
                         <div class="content-box">
